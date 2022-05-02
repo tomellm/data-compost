@@ -1,4 +1,4 @@
-const dropzone = document.querySelector('main'); //dr tom isch afigger und io honen lieb
+const dropzone = document.querySelector('main'); 
 
 dropzone.addEventListener('dragenter', event => { 
     event.preventDefault();
