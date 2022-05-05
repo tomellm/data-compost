@@ -30,20 +30,18 @@ dropzone.addEventListener('drop', event => {
         reader.addEventListener('loadend', () => {
             const img = document.createElement('img');
             img.src = reader.result;
+           
+            var x = Math.random()*(dropzone.offsetWidth-100);
+            var y = Math.random()*(dropzone.offsetHeight-100);
+            img.style.left = x + 'px';
+            img.style.top= y + 'px';
+
             dropzone.append(img);
 
         });   
 
     };
-    for(var i = 0; i < list.length; i++) {
-        var x = Math.random()*screen.width;
-        var y = Math.random()*screen.height;
-        var img = document.createElement('div');
-        img.className = 'img';
-        img.style.left = x + 'px';
-        img.style.top= y + 'px';
-        document.body.appendChild(img);
-    }
+    
     
 });
 
