@@ -17,15 +17,39 @@ main {
     
 }
 
-@keyframes transform  { 
+@keyframes transform1  { 
     from {transform: rotate(0deg) skewY(20deg);}
     to {transform: rotate(360deg) skewY(360deg);}
 }
 
 @keyframes feGaussianBlur {
     from {filter: blur(0);}
-    to { filter: blur(1.5rem);  }
+    to {filter: blur(1.5rem);}
 }
+
+@keyframes invert {
+    from {filter: invert(0);}
+    to {filter: invert(1);}  
+    }
+
+@keyframes opacity {
+    from { opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes transform2 {
+    from {transform: scale(1, 1);}
+    to {transform: scale(1000, 0.5);}
+}
+
+
+?@keyframes pixels {
+    from {image-rendering: auto;}
+    to {image-rendering: pixelated;}?
+}
+
+
+
 /*.imgclass1 {
     position: absolute; 
     transform: rotate(0deg) skewY(0deg);

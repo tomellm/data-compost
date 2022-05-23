@@ -59,13 +59,14 @@ dropzone.addEventListener('drop', event => {
             }
 
             
-            
-           
-         animationSelector = Math.floor(Math.random() * 11);
-            
+        animationSelector = 5 //Math.floor(Math.random() * 11);
+         
+        img.style.position = "absolute";
+        img.style.width = "calc(100px * " + width + ")"
+        img.style.height = "calc(100px * " + height + ")";
+         
          if (animationSelector == 0) {
            
-            img.style.position = "absolute";
             img.style.width = "calc(100px * " + width + ")"
             img.style.height = "calc(100px * " + height + ")";
             img.style.transform = "rotate(0deg) skewY(0deg)";
@@ -75,47 +76,48 @@ dropzone.addEventListener('drop', event => {
             }
 
         if (animationSelector == 1) {
-           
             img.style.position = "absolute";
-            img.style.width = "300px" ;
+            img.style.width = "400px" ;
             img.style.height = "300px";
             img.style.animationName = "feGaussianBlur";
             img.style.animationDuration = Math.floor(Math.random() * 200)+"s";
             }
 
         if (animationSelector == 2) {
-           
-            img.style.width = "30px" ;
-            img.style.height = "30px";
-            img.style.animationName = "transform";
-            img.style.animationDuration = Math.floor(Math.random() * 100)+"s";
-            img.style.animationIterationCount = "infinite";
+            img.style.position = "absolute";
+            img.style.width = "600px" ;
+            img.style.height = "200px";
+            img.style.animationName = "invert";
+            img.style.animationDuration = Math.floor(Math.random() * 200)+"s";
+            img.style.filter = "invert(1)"
             }
        
-        if (animationSelector == 3) {
+       if (animationSelector == 3) {
            
             img.style.width = "30px" ;
             img.style.height = "30px";
-            img.style.animationName = "transform";
+            img.style.animationName = "opacity";
             img.style.animationDuration = Math.floor(Math.random() * 100)+"s";
-            img.style.animationIterationCount = "infinite";
+            img.style.animationIterationCount = 1;
+            img.style.filter = "opacity(0)"
             }    
         if (animationSelector == 4) {
            
-            img.style.width = "30px" ;
-            img.style.height = "30px";
-            img.style.animationName = "transform";
-            img.style.animationDuration = Math.floor(Math.random() * 100)+"s";
-            img.style.animationIterationCount = "infinite";
+            img.style.width = "5" ;
+            img.style.height = "60";
+            img.style.animationName = "transform2";
+            img.style.animationDuration = Math.floor(Math.random() * 5000)+"s";
+            img.style.animationIterationCount = 1;
+            img.style.transform = scale(1000, 0.5);
             }
     
         if (animationSelector == 5) {
                
-            img.style.width = "30px" ;
-            img.style.height = "30px";
-            img.style.animationName = "transform";
-            img.style.animationDuration = Math.floor(Math.random() * 100)+"s";
-            img.style.animationIterationCount = "infinite";
+            img.style.width = "200px" ;
+            img.style.height = "200px";
+            img.style.animationName = "";
+            img.style.animationDuration = Math.floor(Math.random() * 10)+"s";
+            img.style.animationIterationCount = 1;
             }
            
         if (animationSelector == 6) {
@@ -175,9 +177,5 @@ dropzone.addEventListener('drop', event => {
         });   
     };
 });
-
-
-
-
 
 
