@@ -87,7 +87,6 @@ dropzone.addEventListener('drop', event => {
                 height = 1;
                 width = 1;
             }
-
             
             animationSelector = Math.floor(Math.random() * 11);
          
