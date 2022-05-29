@@ -1,6 +1,8 @@
 body {
     margin:0;
     font-family:'Courier New', Courier, monospace;
+    background-color: rgb(2, 2, 2);
+    overflow: hidden;
 }
 
 main {
@@ -8,13 +10,30 @@ main {
     width: calc(100vw - 10px);
     height: calc(100vh - 10px);
     position: relative;
-    background-color: rgb(2, 2, 2);
+    z-index: 10;
 }
 
 .active {
     border: 5px solid rgba(64, 64, 64, 0.129);
     background-image: url('tinyworm-2.gif');
     
+}
+
+#canvas {
+    z-index: 1;
+}
+
+#virt-canvas {
+    z-index: 0;
+    visibility: hidden;
+}
+
+.canvas {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 @keyframes transform1  { 
@@ -63,6 +82,7 @@ main {
     top:45%; 
     font-size: 30px;
     color:#ddd;padding:10px 16px;
+    z-index:11;
 }
 .container{
     position: fixed; 
