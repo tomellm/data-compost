@@ -61,25 +61,15 @@ main {
     to {transform: scale(1000, 0.5);}
 }
 
-
-?@keyframes pixels {
-    from {image-rendering: auto;}
-    to {image-rendering: pixelated;}?
+@keyframes transform3 {
+    from {transform: scale(1, 1);}
+    to {transform: scale(0.5, 1000);}
 }
-
-
-
-/*.imgclass1 {
-    position: absolute; 
-    transform: rotate(0deg) skewY(0deg);
-    animation-name: transform ;
-    animation-duration: 200s;
-}*/
 
 .title{
     position:fixed;
     left:45%;
-    top:45%; 
+    top:80%; 
     font-size: 30px;
     color:#ddd;padding:10px 16px;
     z-index:11;

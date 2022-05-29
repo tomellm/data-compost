@@ -96,7 +96,7 @@ dropzone.addEventListener('drop', event => {
          
             if (animationSelector == 0) {
                 console.log(animationSelector)
-                setImageAnimation(img, "calc(100px * " + width + ")", "calc(100px * " + height + ")", "transform1", Math.floor(Math.random() * 100)+"s", "infinite");
+                setImageAnimation(img, "calc(100px * " + width + ")", "calc(100px * " + height + ")", "transform1", Math.floor(Math.random() * 500)+"s", "infinite");
                 img.style.transform = "rotate(0deg) skewY(0deg)";
                 img.style.animationIterationCount = "infinite";
                 dropzone.append(img);
@@ -104,6 +104,7 @@ dropzone.addEventListener('drop', event => {
                 console.log(animationSelector)
                 img.style.position = "absolute";
                 setImageAnimation(img, "400px", "300px", "feGaussianBlur", Math.floor(Math.random() * 200)+"s", "auto");
+                img.style.filter = "blur(1.5rem)"
                 dropzone.append(img);
             }else if (animationSelector == 2) {
                 console.log(animationSelector)
@@ -118,10 +119,15 @@ dropzone.addEventListener('drop', event => {
                 dropzone.append(img);
             } else if (animationSelector == 4) {
                 console.log(animationSelector)
-                setImageAnimation(img, "5px", "60px", "transform2", Math.floor(Math.random() * 5000)+"s", "1");
+                setImageAnimation(img, "50px", "400px", "transform2", Math.floor(Math.random() * 5000)+"s", "1");
                 img.style.transform = "scale(1000, 0.5)";
                 dropzone.append(img);
-            } else if (animationSelector >= 5 && animationSelector <= 12) {
+            } else if (animationSelector == 5) {
+                console.log(animationSelector)
+                setImageAnimation(img, "400px", "60px", "transform3", Math.floor(Math.random() * 5000)+"s", "1");
+                img.style.transform = "scale(1000, 0.5)";
+                dropzone.append(img);
+            } else if (animationSelector >= 6 && animationSelector <= 12) {
                 let image = new Image();
                 image.src = img.src;
                 image.onload = function() {
