@@ -57,20 +57,21 @@ dropzone.addEventListener('drop', event => {
                 height = 1;
                 width = 1;
             }
-
             
-        animationSelector = 5 //Math.floor(Math.random() * 11);
+            img.style.position = "absolute";
+            img.style.width = "calc(100px * " + width + ")"
+            img.style.height = "calc(100px * " + height + ")";
+            
+        animationSelector = Math.floor(Math.random() * 4);
          
-        img.style.position = "absolute";
-        img.style.width = "calc(100px * " + width + ")"
-        img.style.height = "calc(100px * " + height + ")";
+        
          
          if (animationSelector == 0) {
            
             img.style.width = "calc(100px * " + width + ")"
             img.style.height = "calc(100px * " + height + ")";
             img.style.transform = "rotate(0deg) skewY(0deg)";
-            img.style.animationName = "transform";
+            img.style.animationName = "transform1";
             img.style.animationDuration = Math.floor(Math.random() * 100)+"s";
             img.style.animationIterationCount = "infinite";
             }
